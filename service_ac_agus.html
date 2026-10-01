@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b5ed7">
+<title>Service AC Agus | Cuci, Instalasi, Freon & Bongkar Pasang</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f7fb;color:#182433}
+.hero{background:linear-gradient(135deg,#0756c9,#19a7e8);color:#fff;padding:42px 20px 70px;text-align:center}
+.hero h1{font-size:34px;margin:0 0 10px}
+.hero p{font-size:17px;margin:7px 0;line-height:1.5}
+.container{max-width:900px;margin:-32px auto 40px;padding:0 15px}
+.card{background:#fff;border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 8px 30px rgba(0,50,100,.09)}
+h2{color:#0756c9;margin:0 0 18px;font-size:23px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.price-card{border:1px solid #dce8f4;border-radius:16px;padding:18px;background:#fbfdff}
+.price-card h3{margin:0 0 10px;color:#123d6b;font-size:18px}
+.price{font-size:22px;font-weight:800;color:#087443}
+.note{font-size:13px;color:#687789;line-height:1.5;margin-top:8px}
+label{font-weight:700;display:block;margin:15px 0 7px}
+select,input{width:100%;padding:14px;border:1px solid #cbd8e5;border-radius:11px;font-size:16px;background:#fff}
+button,.wa{display:block;width:100%;padding:15px;border:0;border-radius:12px;font-size:17px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
+button{background:#0756c9;color:white;margin-top:18px}
+.wa{background:#16a34a;color:#fff;margin-top:12px}
+.result{display:none;background:#eef8f1;border:1px solid #bce2c8;border-radius:14px;padding:17px;margin-top:18px}
+.result.show{display:block}
+.result strong{font-size:22px;color:#087443}
+.info{line-height:1.8}
+ul{padding-left:21px;line-height:1.8}
+footer{text-align:center;color:#697789;font-size:13px;padding:8px 20px 30px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}.card{padding:19px}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>🔧 SERVICE AC AGUS</h1>
+  <p>Jasa Service AC • Cuci AC • Instalasi • Freon • Bongkar Pasang</p>
+  <p>📞 0878-8366-3256</p>
+</section>
+
+<main class="container">
+
+<section class="card">
+  <h2>💰 Daftar Harga Service AC</h2>
+  <div class="grid">
+    <div class="price-card">
+      <h3>❄️ Cuci AC</h3>
+      <div class="price">Mulai Rp75.000 / PK</div>
+      <div class="note">Harga contoh dan dapat disesuaikan berdasarkan kondisi serta lokasi AC.</div>
+    </div>
+    <div class="price-card">
+      <h3>🔧 Instalasi AC</h3>
+      <div class="price">Mulai Rp350.000</div>
+      <div class="note">Instalasi standar. Material tambahan dapat dihitung terpisah.</div>
+    </div>
+    <div class="price-card">
+      <h3>🧊 Isi / Tambah Freon</h3>
+      <div class="price">Mulai Rp150.000</div>
+      <div class="note">Harga dapat berbeda sesuai jenis refrigerant, kapasitas AC dan kebutuhan pengisian.</div>
+    </div>
+    <div class="price-card">
+      <h3>🔄 Bongkar Pasang</h3>
+      <div class="price">Mulai Rp400.000</div>
+      <div class="note">Belum termasuk material tambahan dan pekerjaan khusus bila diperlukan.</div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:16px"><b>Catatan:</b> Tarif di atas adalah harga awal/contoh. Silakan ubah nominal sesuai tarif jasa Anda sebelum dipublikasikan.</div>
+</section>
+
+<section class="card">
+  <h2>🧮 Estimasi Cuci AC</h2>
+  <label for="pk">Pilih kapasitas AC</label>
+  <select id="pk">
+    <option value="75000">0.5 PK — Rp75.000</option>
+    <option value="75000">1 PK — Rp75.000</option>
+    <option value="90000">1.5 PK — Rp90.000</option>
+    <option value="110000">2 PK — Rp110.000</option>
+    <option value="130000">2.5 PK — Rp130.000</option>
+  </select>
+
+  <label for="qty">Jumlah unit</label>
+  <input id="qty" type="number" min="1" value="1">
+
+  <button onclick="calculate()">HITUNG ESTIMASI</button>
+
+  <div id="result" class="result">
+    Estimasi cuci AC: <strong id="total"></strong>
+    <div class="note">Estimasi dapat berubah setelah pengecekan kondisi AC dan lokasi.</div>
+  </div>
+
+  <a class="wa" id="wa" href="#" target="_blank">💬 TANYA / BOOKING VIA WHATSAPP</a>
+</section>
+
+<section class="card">
+  <h2>🛠️ Layanan Kami</h2>
+  <ul>
+    <li>Cuci AC split rumah, kantor dan tempat usaha</li>
+    <li>Instalasi AC baru</li>
+    <li>Isi / tambah freon</li>
+    <li>Perbaikan dan pengecekan AC</li>
+    <li>Bongkar AC</li>
+    <li>Pasang kembali AC</li>
+    <li>Pengecekan kebocoran dan kondisi AC</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>📞 Hubungi Agus</h2>
+  <div class="info">
+    <b>Nama:</b> Agus<br>
+    <b>WhatsApp:</b> 0878-8366-3256<br>
+    <b>Layanan:</b> Service AC, Cuci AC, Instalasi, Freon, Bongkar Pasang
+  </div>
+  <a class="wa" href="https://wa.me/6287883663256?text=Halo%20Agus%2C%20saya%20ingin%20tanya%20service%20AC." target="_blank">📲 HUBUNGI AGUS SEKARANG</a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Service AC Agus • Harga dapat disesuaikan dengan pekerjaan dan lokasi
+</footer>
+
+<script>
+function rupiah(n){
+  return "Rp " + Number(n).toLocaleString("id-ID");
+}
+function calculate(){
+  const price=Number(document.getElementById("pk").value);
+  const qty=Math.max(1,Number(document.getElementById("qty").value)||1);
+  const total=price*qty;
+  document.getElementById("total").textContent=rupiah(total);
+  document.getElementById("result").classList.add("show");
+
+  const pkText=document.getElementById("pk").options[document.getElementById("pk").selectedIndex].text;
+  const msg=`Halo Agus, saya ingin booking service AC.%0A%0AJenis: Cuci AC%0AKapasitas: ${encodeURIComponent(pkText)}%0AJumlah unit: ${qty}%0AEstimasi: ${encodeURIComponent(rupiah(total))}`;
+  document.getElementById("wa").href="https://wa.me/6287883663256?text="+msg;
+}
+calculate();
+</script>
+
+</body>
+</html>
